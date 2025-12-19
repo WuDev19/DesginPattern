@@ -7,7 +7,6 @@ public class ThreadSafeDoubleCheckInitialization {
     private ThreadSafeDoubleCheckInitialization() {
     }
 
-    //abc
     public static ThreadSafeDoubleCheckInitialization getInstance() {
         if (INSTANCE == null) {
             synchronized (ThreadSafeDoubleCheckInitialization.class) {
