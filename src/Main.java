@@ -1,14 +1,19 @@
-import factory.Candy;
-import factory.CandyFactory;
-import factory.CandyType;
+import builder.khaibaodu4thanhphan.HomeBuilder;
+import builder.khaibaodu4thanhphan.House;
+import builder.khaibaodunginnerclass.Home;
 
+//Director trong Builder Pattern
 public class Main {
     public static void main(String[] args) {
-        try {
-            Candy candy = CandyFactory.create(CandyType.HARD);
-            System.out.println(candy.getCandyName());
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        House house = new HomeBuilder()
+                .hasPool(true)
+                .setDoor(10)
+                .build();
+        System.out.println(house.toString());
+
+        Home home = new Home.Builder("Green")
+                .hasRoof(true)
+                .build();
+        System.out.println(home.toString());
     }
 }
