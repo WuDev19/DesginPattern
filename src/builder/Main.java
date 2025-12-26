@@ -1,3 +1,5 @@
+package builder;
+
 import builder.khaibaodu4thanhphan.HomeBuilder;
 import builder.khaibaodu4thanhphan.House;
 import builder.khaibaodunginnerclass.Home;
