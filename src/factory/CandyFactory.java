@@ -6,7 +6,7 @@ public class CandyFactory {
     private CandyFactory() {
     } //không cho tạo instance của CandyFactory
 
-    public static Candy create(CandyType candyType) throws Exception {
+    public static Candy create(CandyType candyType) throws Exception{
         switch (candyType) {
             case HARD -> {
                 return new HardCandy();
@@ -17,7 +17,7 @@ public class CandyFactory {
             case MINTY -> {
                 return new MintyCandy();
             }
-            case null, default -> throw new Exception("Không có loại kẹo nào phù hợp yêu cầu của bạn");
+            case null, default -> throw new NullPointerException("Không có loại kẹo nào phù hợp yêu cầu của bạn");
         }
     }
 
